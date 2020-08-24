@@ -1,7 +1,7 @@
 import React  from 'react';
 
 function FormattedDate(props) {
-    return <h2>It is {props.date.toLocaleTimeString()}.</h2>;
+    return <h2>It is {props.date.toLocaleTimeString('it-IT')}.</h2>;
 }
 
 class Clock extends React.Component {
