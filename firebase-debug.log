@@ -1,0 +1,61 @@
+[debug] [2020-08-24T15:15:44.393Z] ----------------------------------------------------------------------
+[debug] [2020-08-24T15:15:44.395Z] Command:       /Users/raku/.nodebrew/node/v14.6.0/bin/node /Users/raku/.nodebrew/current/bin/firebase deploy
+[debug] [2020-08-24T15:15:44.395Z] CLI Version:   8.6.0
+[debug] [2020-08-24T15:15:44.395Z] Platform:      darwin
+[debug] [2020-08-24T15:15:44.395Z] Node Version:  v14.6.0
+[debug] [2020-08-24T15:15:44.396Z] Time:          Tue Aug 25 2020 00:15:44 GMT+0900 (Japan Standard Time)
+[debug] [2020-08-24T15:15:44.396Z] ----------------------------------------------------------------------
+[debug] [2020-08-24T15:15:44.396Z] 
+[debug] [2020-08-24T15:15:44.404Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-24T15:15:44.404Z] > authorizing via signed-in user
+[debug] [2020-08-24T15:15:44.404Z] [iam] checking project event-clock for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-08-24T15:15:44.407Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/event-clock:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-08-24T15:15:45.222Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 24 Aug 2020 15:15:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=624","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-24T15:15:45.224Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/event-clock  
+ 
+[debug] [2020-08-24T15:15:46.092Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 24 Aug 2020 15:15:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'event-clock'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-08-24T15:15:46.095Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/event-clock/versions  
+ {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-08-24T15:15:48.587Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 24 Aug 2020 15:15:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[event-clock]: beginning deploy... 
+[info] i  hosting[event-clock]: found 20 files in build 
+[debug] [2020-08-24T15:15:48.595Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2020-08-24T15:15:48.674Z] [hosting] hash cache [YnVpbGQ] stored for 20 files
+[debug] [2020-08-24T15:15:48.675Z] [hosting][hash queue][FINAL] {"max":73,"min":8,"avg":12.95,"active":0,"complete":20,"success":20,"errored":0,"retried":0,"total":20,"elapsed":80}
+[debug] [2020-08-24T15:15:48.675Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/event-clock/versions/0e190ba2708ea496:populateFiles  
+ <request body omitted>
+[debug] [2020-08-24T15:15:50.224Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 24 Aug 2020 15:15:50 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-24T15:15:50.235Z] [hosting][populate queue][FINAL] {"max":1553,"min":1553,"avg":1553,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1562}
+[debug] [2020-08-24T15:15:50.235Z] [hosting] uploads queued: 20
+[debug] [2020-08-24T15:15:53.852Z] [hosting][upload queue][FINAL] {"max":3627,"min":1846,"avg":2518.8,"active":0,"complete":20,"success":20,"errored":0,"retried":0,"total":20,"elapsed":3627}
+[info] ✔  hosting[event-clock]: file upload complete 
+[debug] [2020-08-24T15:15:53.853Z] [hosting] deploy completed after 5265ms
+[debug] [2020-08-24T15:15:53.854Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "event-clock"
+    },
+    "site": "event-clock",
+    "version": "sites/event-clock/versions/0e190ba2708ea496"
+  }
+]
+[info] i  hosting[event-clock]: finalizing version... 
+[debug] [2020-08-24T15:15:53.854Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/event-clock/versions/0e190ba2708ea496?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2020-08-24T15:15:55.245Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 24 Aug 2020 15:15:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-24T15:15:55.246Z] [hosting] finalized version for event-clock: {"name":"sites/event-clock/versions/0e190ba2708ea496","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2020-08-24T15:15:47.288026Z","createUser":{"email":"rakutek12@gmail.com"},"finalizeTime":"2020-08-24T15:15:55.076467Z","finalizeUser":{"email":"rakutek12@gmail.com"}}
+[info] ✔  hosting[event-clock]: version finalized 
+[info] i  hosting[event-clock]: releasing new version... 
+[debug] [2020-08-24T15:15:55.246Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/event-clock/releases?version_name=sites/event-clock/versions/0e190ba2708ea496  
+ {"message":null}
