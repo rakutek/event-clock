@@ -1,0 +1,28 @@
+@font-face {
+  /*フォントの名前*/
+  font-family: "../roboto-v20-latin-900.woff";
+  /*フォントファイルへのパス（複数指定の場合、上から順に読み込まれる）*/
+  src: url('../roboto-v20-latin-900.woff') format('woff');
+}
+
+
+@font-face {
+  /*フォントの名前*/
+  font-family: "DSEG7Modern-Bold";
+  /*フォントファイルへのパス（複数指定の場合、上から順に読み込まれる）*/
+  src: url('../DSEG7Modern-Bold.woff') format('woff');
+}
+
+
+
+
+
+//.flextimer {
+//  .font-size {
+//    font-family: "roboto-v20-latin-900.woff", sans-serif;
+//  }
+//
+//  h2 {
+//    font-family: "roboto-v20-latin-900.woff", sans-serif;
+//  }
+//}

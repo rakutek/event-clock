@@ -1,5 +1,4 @@
 import React from 'react';
-import Timer from "./Timer";
 import Column from "./Column";
 
 class Main extends React.Component {

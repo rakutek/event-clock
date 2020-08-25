@@ -1,3 +1,10 @@
+@font-face {
+  /*フォントの名前*/
+  font-family: "../roboto-v20-latin-900.woff";
+  /*フォントファイルへのパス（複数指定の場合、上から順に読み込まれる）*/
+  src: url('../roboto-v20-latin-900.woff') format('woff');
+}
+
 .column {
 
   align-items: center;
@@ -6,7 +13,7 @@
   .flex {
     display: flex;
 
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
     max-width: 500px;
   }
 
@@ -14,13 +21,16 @@
     color: white;
     font-size: 21px;
     padding-top: 14px;
-    padding-right: 10px;
+
+
+    font-family: "roboto-v20-latin-900.woff", sans-serif;
   }
 
   .name {
     color: #e85838;
     font-weight: bold;
     font-size: 40px;
+    font-family: "roboto-v20-latin-900.woff", sans-serif;
 
   }
 
