@@ -51,10 +51,10 @@ const Timer = () => {
         >
 
             <div className="flex ">
-                    <h2>{h}</h2>
-                    <h2>{m}</h2>
-                    <h2>{s}</h2>
+                <h2>{h}:</h2><h2>{m}:</h2> <h2>{s}</h2>
             </div>
+
+
         </div>
     );
 };

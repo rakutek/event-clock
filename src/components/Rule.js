@@ -1,10 +1,10 @@
 import React  from 'react';
 
-const Rule = ({ color }) => (
+const Rule = ( ) => (
     <hr
         style={{
-            color: color,
-            backgroundColor: color,
+            color: "white",
+            backgroundColor: "white",
             width: 800,
         }}
     />
