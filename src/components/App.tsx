@@ -4,7 +4,6 @@ import './App.css';
 
 import Header from "./Header";
 import Main from "./Main";
-import Timer from "./Timer";
 
 function App() {
     return (
@@ -13,8 +12,7 @@ function App() {
         <div>
             <Header/>
             <Main/>
-            <Timer/>
-            {/*<Footer />*/}
+
         </div>
     );
 }
