@@ -9,9 +9,6 @@ class Main extends React.Component {
 
            <div>
                <Timer/>
-               {/*<Rule/>*/}
-               <hr/>
-               fa
            </div>
         )
     }

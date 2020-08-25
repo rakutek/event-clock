@@ -2,10 +2,17 @@
 
 .flex {
     display: flex;
-    /*height: 300%;*/
+
+
+
+    margin: 0 auto;
+    max-width: 500px;
+
 }
 
 .flex h2 {
     color: white;
     font-size: 30px;
+
+
 }
