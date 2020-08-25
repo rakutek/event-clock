@@ -1,4 +1,32 @@
+@font-face {
+    /*フォントの名前*/
+    font-family: "DSEG7Modern-Bold";
+    /*フォントファイルへのパス（複数指定の場合、上から順に読み込まれる）*/
+    src: url('../DSEG7Modern-Bold.woff') format('woff');
+}
+
 h1 {
     color: #ff7040;
-    font-size: 700%;
+    font-size: 580%;
+    font-family: "DSEG7Modern-Bold", serif;
+    margin-left: -30px;
+
 }
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 89px;
+        height: 750px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 400%;
+        height: 750px;
+    }
+}
+
+
+

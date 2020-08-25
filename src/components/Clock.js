@@ -1,9 +1,10 @@
 import React  from 'react';
 
-// import './Clock.css'
+import './Clock.css'
+
 
 function FormattedDate(props) {
-    return <h1> {props.date.toLocaleTimeString('it-IT')} </h1>;
+    return <h1>{props.date.toLocaleTimeString('it-IT')} </h1>;
 }
 
 class Clock extends React.Component {

@@ -1,0 +1,24 @@
+
+
+/*.flex {*/
+/*    display: flex;*/
+/*}*/
+
+/*.flex h2 {*/
+/*    color: white;*/
+/*}*/
+
+h2 {
+    color: white;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
