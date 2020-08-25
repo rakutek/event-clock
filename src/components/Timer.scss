@@ -18,7 +18,9 @@
   color: white;
 
 
-  margin: 0 auto;
+  margin: 0 auto auto auto;
+
+
 
   strong {
     font-family: "DSEG7Modern-Bold", serif;
@@ -27,5 +29,6 @@
 
   span {
     font-size: 25px;
+    font-family: "roboto-v20-latin-900.woff", sans-serif;
   }
 }

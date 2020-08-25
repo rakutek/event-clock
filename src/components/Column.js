@@ -7,9 +7,6 @@ class Column extends React.Component {
     render() {
 
 
-
-
-
         return (
 
 
@@ -17,16 +14,13 @@ class Column extends React.Component {
                 <hr/>
                 <div className={"flex"}>
 
-                    <div className={"DJ"}>NEXT</div>
+                    <div className={"DJ"}>{this.props.start.slice(11,16)}</div>
                     <div className={"name"}>{this.props.name}</div>
 
-                    <Timer/>
+                    <Timer state={this.props.steate}
+                           date={this.props.start}/>
 
                 </div>
-
-
-
-
 
 
             </div>

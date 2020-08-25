@@ -28,7 +28,8 @@ class Timer extends Component {
     }
 
     calculateCountdown(endDate) {
-        let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000;
+        let diff = (Date.parse(new Date(endDate).toLocaleString({ timeZone: 'Asia/Tokyo' })) - Date.parse(new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }))) / 1000;
+
 
         // clear countdown when date is reached
         if (diff <= 0) return false;
@@ -84,7 +85,8 @@ class Timer extends Component {
 
         <span className="Countdown-col">
           <span className="Countdown-col-element">
-            <span>REMAIN</span><strong>{this.addLeadingZeros(countDown.hours)}:</strong>
+
+            <span >{this.props.state}       </span><strong>{this.addLeadingZeros(countDown.hours)}:</strong>
           </span>
         </span>
 
@@ -111,7 +113,7 @@ Timer.propTypes = {
 };
 
 Timer.defaultProps = {
-    date: new Date()
+    date: new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })
 };
 
 export default Timer;
