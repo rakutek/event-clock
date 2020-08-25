@@ -9,15 +9,15 @@ class Column extends React.Component {
 
 
             <div className={"column"}>
-
+                <hr/>
                 <div className={"flex"}>
                     <div className={"DJ"}>NOW DJ</div>
-                    <div className={"name"}>MASAHIRO</div>
+                    <div className={"name"}>{this.props.name}</div>
+
+                    <Timer/>
                 </div>
 
 
-                <Timer/>
-                <hr/>
             </div>
         )
     }

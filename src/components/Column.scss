@@ -7,23 +7,31 @@
 
 .column {
 
+
   align-items: center;
 
+  height: 106px;
 
   .flex {
     display: flex;
 
-    margin: 0 auto 0 auto;
-    max-width: 500px;
+
+    margin: -7px auto auto auto;
+    max-width: 350px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
   }
 
   .DJ {
     color: white;
     font-size: 21px;
     padding-top: 14px;
-
-
+    padding-right: 13px;
     font-family: "roboto-v20-latin-900.woff", sans-serif;
+
+
   }
 
   .name {
@@ -35,9 +43,6 @@
   }
 
 }
-
-
-
 
 
 .flextimer {

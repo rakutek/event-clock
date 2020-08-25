@@ -8,7 +8,6 @@ class Header extends React.Component {
         return (
             <div className='header'>
                 <Clock date={new Date()}/>
-                <hr/>
             </div>
         );
     }
