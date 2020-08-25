@@ -1,0 +1,57 @@
+.column {
+
+  align-items: center;
+
+
+  .flex {
+    display: flex;
+
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  .DJ {
+    color: white;
+    font-size: 21px;
+    padding-top: 14px;
+    padding-right: 10px;
+  }
+
+  .name {
+    color: #e85838;
+    font-weight: bold;
+    font-size: 40px;
+
+  }
+
+}
+
+
+
+
+
+.flextimer {
+  display: flex;
+
+
+  margin: 0 auto;
+  max-width: 500px;
+
+  h2 {
+    color: white;
+    font-size: 30px;
+
+    margin-top: -7px;
+
+  }
+
+}
+
+
+.font-size {
+  font-size: 20px;
+  //padding-top: -/100px;
+  //margin-top: -50px;
+}
+
+

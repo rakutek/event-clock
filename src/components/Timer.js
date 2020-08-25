@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import TimeFormat from "hh-mm-ss";
 
-import './Timer.css'
+import './Timer.scss'
+
 
 const Timer = () => {
     let mainTime;
@@ -49,9 +50,11 @@ const Timer = () => {
             className="flex flex-column justify-center items-center"
             style={{height: "100vh"}}
         >
+            {/*<h2><span class="font-size">NOW DJ</span></h2>*/}
 
-            <div className="flex ">
-                <h2>{h}:</h2><h2>{m}:</h2> <h2>{s}</h2>
+
+            <div className="flextimer">
+                <h2><span class="font-size">REMAIN</span> {h}:</h2><h2>{m}:</h2> <h2>{s}</h2>
             </div>
 
 

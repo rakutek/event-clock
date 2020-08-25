@@ -1,6 +1,6 @@
 import React from 'react';
 import Timer from "./Timer";
-import Rule from "./Rule";
+import Column from "./Column";
 
 class Main extends React.Component {
     render() {
@@ -8,7 +8,7 @@ class Main extends React.Component {
 
 
            <div>
-               <Timer/>
+               <Column/>
            </div>
         )
     }
