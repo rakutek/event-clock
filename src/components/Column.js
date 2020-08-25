@@ -11,7 +11,8 @@ class Column extends React.Component {
             <div className={"column"}>
                 <hr/>
                 <div className={"flex"}>
-                    <div className={"DJ"}>NOW DJ</div>
+
+                    <div className={"DJ"}>NEXT</div>
                     <div className={"name"}>{this.props.name}</div>
 
                     <Timer/>
