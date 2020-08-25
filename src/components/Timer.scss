@@ -14,15 +14,18 @@
 }
 
 
+.Countdown {
+  color: white;
 
 
+  margin: 0 auto;
 
-//.flextimer {
-//  .font-size {
-//    font-family: "roboto-v20-latin-900.woff", sans-serif;
-//  }
-//
-//  h2 {
-//    font-family: "roboto-v20-latin-900.woff", sans-serif;
-//  }
-//}
+  strong {
+    font-family: "DSEG7Modern-Bold", serif;
+    font-size: 30px;
+  }
+
+  span {
+    font-size: 25px;
+  }
+}

@@ -12,11 +12,11 @@ class Main extends React.Component {
             //     time: 30,
             //     start: "12:12:12"
             // },
-            {
-                name: "UNO",
-                time: 30,
-                start: "12:12:12"
-            },
+            // {
+            //     name: "UNO",
+            //     time: 30,
+            //     start: "12:12:12"
+            // },
             {
                 name: "SUKO",
                 time: 30,
@@ -91,10 +91,23 @@ class Main extends React.Component {
                         <div className={"DJ"}>NOW</div>
                         <div className={"name"}>MASAHIRO</div>
 
-                        <Timer/>
+                        <Timer date={`2020-08-26T02:30:00`}/>
                     </div>
 
 
+
+
+                </div>
+
+                <div className={"column"}>
+                    <hr/>
+                    <div className={"flex"}>
+
+                        <div className={"DJ"}>NOW</div>
+                        <div className={"name"}>UNO</div>
+
+                        <Timer date={`2020-08-26T03:30:00`}/>
+                    </div>
                 </div>
 
 

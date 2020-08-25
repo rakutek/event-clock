@@ -5,6 +5,11 @@ import './Column.scss'
 
 class Column extends React.Component {
     render() {
+
+
+
+
+
         return (
 
 
@@ -16,7 +21,12 @@ class Column extends React.Component {
                     <div className={"name"}>{this.props.name}</div>
 
                     <Timer/>
+
                 </div>
+
+
+
+
 
 
             </div>

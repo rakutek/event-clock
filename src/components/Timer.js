@@ -1,64 +1,117 @@
-import React, {useState, useEffect} from "react";
-import TimeFormat from "hh-mm-ss";
+import React, {Component} from 'react';
+import PropTypes from 'prop-types'
 
 import './Timer.scss'
 
+class Timer extends Component {
+    constructor(props) {
+        super(props);
 
-const Timer = () => {
-    let mainTime;
-    const secondsLeft = () => {
-        const date = new Date();
-        const hours = date.getHours();
-        const minutes = date.getMinutes();
-        const seconds = date.getSeconds();
-        const left = (23 - hours) * 3600 + (60 - minutes) * 60 + (60 - seconds);
-        return left;
-    };
-
-    const [seconds, setSeconds] = useState(secondsLeft());
-    useEffect(() => {
-        startTime();
-        return () => {
-            stopTimer();
-        };
-    });
-
-    const startTime = () => {
-        if (seconds && seconds > 0) {
-            mainTime = setInterval(tick, 1000);
+        this.state = {
+            days: 0,
+            hours: 0,
+            min: 0,
+            sec: 0,
         }
-    };
+    }
 
-    const stopTimer = () => {
-        clearInterval(mainTime);
-    };
+    componentDidMount() {
+        // update every second
+        this.interval = setInterval(() => {
+            const date = this.calculateCountdown(this.props.date);
+            date ? this.setState(date) : this.stop();
+        }, 1000);
+    }
 
-    const tick = () => {
-        setSeconds(seconds => {
-            const updatedSeconds = seconds - 1;
-            if (updatedSeconds < 1) {
-                stopTimer();
-            }
-            return updatedSeconds;
-        });
-    };
+    componentWillUnmount() {
+        this.stop();
+    }
 
-    const display = TimeFormat.fromS(seconds, "hh:mm:ss");
-    const [h, m, s] = display.split(":");
-    return (
-        <div
-            className="flex flex-column justify-center items-center"
-            style={{height: "100vh"}}
-        >
-            {/*<h2><span class="font-size">NOW DJ</span></h2>*/}
+    calculateCountdown(endDate) {
+        let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000;
+
+        // clear countdown when date is reached
+        if (diff <= 0) return false;
+
+        const timeLeft = {
+            years: 0,
+            days: 0,
+            hours: 0,
+            min: 0,
+            sec: 0
+        };
+
+        // calculate time difference between now and expected date
+        if (diff >= (365.25 * 86400)) { // 365.25 * 24 * 60 * 60
+            timeLeft.years = Math.floor(diff / (365.25 * 86400));
+            diff -= timeLeft.years * 365.25 * 86400;
+        }
+        if (diff >= 3600) { // 24 * 60 * 60
+            timeLeft.days = Math.floor(diff / 86400);
+            diff -= timeLeft.days * 86400;
+        }
+        if (diff >= 3600) { // 60 * 60
+            timeLeft.hours = Math.floor(diff / 3600);
+            diff -= timeLeft.hours * 3600;
+        }
+        if (diff >= 60) {
+            timeLeft.min = Math.floor(diff / 60);
+            diff -= timeLeft.min * 60;
+        }
+        timeLeft.sec = diff;
+
+        return timeLeft;
+    }
+
+    stop() {
+        clearInterval(this.interval);
+    }
+
+    addLeadingZeros(value) {
+        value = String(value);
+        while (value.length < 2) {
+            value = '0' + value;
+        }
+        return value;
+    }
+
+    render() {
+        const countDown = this.state;
+
+        return (
+            <div className="Countdown">
 
 
-            <div className="flextimer">
-                <h2><span class="font-size">REMAIN</span> {h}:</h2><h2>{m}:</h2> <h2>{s}</h2>
+        <span className="Countdown-col">
+          <span className="Countdown-col-element">
+            <span>REMAIN</span><strong>{this.addLeadingZeros(countDown.hours)}:</strong>
+          </span>
+        </span>
+
+
+                <span className="Countdown-col">
+          <span className="Countdown-col-element">
+            <strong>{this.addLeadingZeros(countDown.min)}:</strong>
+          </span>
+        </span>
+
+                <span className="Countdown-col">
+          <span className="Countdown-col-element">
+            <strong>{this.addLeadingZeros(countDown.sec)}</strong>
+            <span></span>
+          </span>
+        </span>
             </div>
+        );
+    }
+}
 
-
-        </div>
-    );
+Timer.propTypes = {
+    date: PropTypes.string.isRequired
 };
+
+Timer.defaultProps = {
+    date: new Date()
+};
+
 export default Timer;
