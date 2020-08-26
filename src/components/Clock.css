@@ -5,7 +5,7 @@
     src: url('../DSEG7Modern-Bold.woff') format('woff');
 }
 
- h1 {
+h1 {
     color: #e85838;
     font-size: 580%;
     font-family: "DSEG7Modern-Bold", serif;
@@ -16,7 +16,7 @@
     align-items: center;
     margin: 0 auto;
 
-     /*padding-left: 24px;*/
+    /*padding-left: 24px;*/
 
 }
 

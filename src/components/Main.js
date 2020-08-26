@@ -91,7 +91,8 @@ class Main extends React.Component {
                         <div className={"DJ"}>NOW</div>
                         <div className={"name"}>MASAHIRO</div>
 
-                        <Timer date={`2020-08-26T03:00:00+09:00`}
+                        <Timer start={`2020-08-26T13:00:00+09:00`}
+                               end={'2020-08-26T13:30:00+09:00'}
                                state={"REMAIN"}/>
                     </div>
 
@@ -106,7 +107,7 @@ class Main extends React.Component {
                             <Column
                                 name={dj.name}
                                 start={dj.start}
-                                steate={"AFTER"}
+                                state={"AFTER"}
                             />
                         );
                     })
