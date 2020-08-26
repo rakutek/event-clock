@@ -16,16 +16,9 @@ class Timer extends Component {
     }
 
     componentDidMount() {
-
-
         // update every second
         this.interval = setInterval(() => {
-            let date = this.calculateCountdown(this.props.start);
-
-            if (date === false) {
-                date = this.calculateCountdown(this.props.state);
-            }
-
+            const date = this.calculateCountdown(this.props.start);
             date ? this.setState(date) : this.stop();
         }, 1000);
     }
@@ -87,13 +80,11 @@ class Timer extends Component {
         const countDown = this.state;
 
         let state = 'AFTER';
-
-        let date = this.calculateCountdown(this.props.start);
-
-        if (date === false) {
+        if (countDown.hours === 0 && countDown.min === 0 && countDown.sec === 0) {
             state = 'REMAIN'
-        }
 
+
+        }
 
         return (
             <div className="Countdown">
