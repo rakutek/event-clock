@@ -1,21 +1,20 @@
 import React from 'react';
 import Column from "./Column";
-import Timer from "./Timer";
 
 class Main extends React.Component {
     render() {
 
 
         const djlist = [
-            // {
-            //     name: "MASAHIRO",
-            //     time: 30,
-            //     start: "12:12:12"
-            // },
+            {
+                name: "MASAHIRO",
+                time: 30,
+                start: "2020-08-25T11:30:00+09:00",
+            },
             {
                 name: "UNO",
                 time: 30,
-                start: "2020-08-28T17:30:00+09:00"
+                start: "2020-08-28T11:30:00+09:00",
             },
             {
                 name: "SUKO",
@@ -82,22 +81,8 @@ class Main extends React.Component {
         ];
 
         return (
-            <dic>
+            <div>
 
-                <div className={"column"}>
-                    <hr/>
-                    <div className={"flex"}>
-
-                        <div className={"DJ"}>NOW</div>
-                        <div className={"name"}>MASAHIRO</div>
-
-                        <Timer start={`2020-08-26T13:00:00+09:00`}
-                               end={'2020-08-26T13:30:00+09:00'}
-                               state={"REMAIN"}/>
-                    </div>
-
-
-                </div>
 
 
                 {
@@ -112,7 +97,7 @@ class Main extends React.Component {
                         );
                     })
                 }
-            </dic>
+            </div>
         )
 
 
