@@ -2,15 +2,12 @@
   /*フォントの名前*/
   font-family: "../roboto-v20-latin-900.woff";
   /*フォントファイルへのパス（複数指定の場合、上から順に読み込まれる）*/
-  src: url('../roboto-v20-latin-900.woff') format('woff');
+  src: url('../assets/roboto-v20-latin-900.woff') format('woff');
 }
 
 .column {
-
-
   align-items: center;
-
-  height: 106px;
+  height: 97px;
 
   .flex {
     display: flex;
@@ -27,20 +24,19 @@
   .DJ {
     color: white;
     font-size: 21px;
-    padding-top: 14px;
+    padding-top: 16px;
     padding-right: 13px;
     font-family: "roboto-v20-latin-900.woff", sans-serif;
 
 
   }
 
-
   .name {
+    padding-top: 4px;
     color: #e85838;
     font-weight: bold;
     font-size: 40px;
     font-family: "roboto-v20-latin-900.woff", sans-serif;
-
     font-size-adjust: 1
 
   }

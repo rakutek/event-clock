@@ -2,7 +2,7 @@
   /*フォントの名前*/
   font-family: "../roboto-v20-latin-900.woff";
   /*フォントファイルへのパス（複数指定の場合、上から順に読み込まれる）*/
-  src: url('../roboto-v20-latin-900.woff') format('woff');
+  src: url('../assets/roboto-v20-latin-900.woff') format('woff');
 }
 
 
@@ -10,7 +10,7 @@
   /*フォントの名前*/
   font-family: "DSEG7Modern-Bold";
   /*フォントファイルへのパス（複数指定の場合、上から順に読み込まれる）*/
-  src: url('../DSEG7Modern-Bold.woff') format('woff');
+  src: url('../assets/DSEG7Modern-Bold.woff') format('woff');
 }
 
 
@@ -19,7 +19,6 @@
 
 
   margin: 0 auto auto auto;
-
 
 
   strong {

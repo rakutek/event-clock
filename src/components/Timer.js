@@ -79,6 +79,11 @@ class Timer extends Component {
     render() {
         const countDown = this.state;
 
+        let state = 'AFTER';
+        if(countDown.hours === 0 && countDown.min === 0 && countDown.sec === 0){
+            state = 'REMAIN'
+        }
+
         return (
             <div className="Countdown">
 
@@ -86,7 +91,7 @@ class Timer extends Component {
         <span className="Countdown-col">
           <span className="Countdown-col-element">
 
-            <span >{this.props.state}       </span><strong>{this.addLeadingZeros(countDown.hours)}:</strong>
+            <span >{state}       </span><strong>{this.addLeadingZeros(countDown.hours)}:</strong>
           </span>
         </span>
 
@@ -100,7 +105,6 @@ class Timer extends Component {
                 <span className="Countdown-col">
           <span className="Countdown-col-element">
             <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-            <span></span>
           </span>
         </span>
             </div>
